@@ -1,0 +1,91 @@
+<%- include("partials/header"); -%>
+
+<section class="vh-120 bg-image" style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp'); padding: 70px 0px 70px 0px;">
+  <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-100">
+      <h1 style="text-align: center; color: white;" class="mb-5">Payment Gateway</h1>
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <div class="card" style="border-radius: 15px">
+            <div class="card-body p-5">
+              <h2 class="text-uppercase text-center mb-5">Create an account</h2>
+
+              <%- include('./partials/messages') -%>
+
+              <form method="post" action="/register">
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="name">Full Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="form-control form-control-lg"
+                    value="<%= typeof name != 'undefined' ? name : ''%>"
+                  />
+                </div>
+                <label class="form-label" for="email">Email Address</label>
+                <div class="form-outline mb-4">
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="form-control form-control-lg"
+                    value="<%= typeof email != 'undefined' ? email : ''%>"
+                  />
+                </div>
+                <label class="form-label" for="accountno">Account Number</label>
+                <div class="form-outline mb-4">
+                  <input
+                    type="number"
+                    id="accountno"
+                    name="accountno"
+                    class="form-control form-control-lg"
+                    value="<%= typeof accountno != 'undefined' ? accountno : ''%>"
+                  />
+                </div>
+                <label class="form-label" for="pass">Password</label>
+                <div class="form-outline mb-4">
+                  <input
+                    type="password"
+                    id="pass"
+                    name="pass"
+                    class="form-control form-control-lg"
+                    value="<%= typeof pass != 'undefined' ? pass : ''%>"
+                  />
+                </div>
+                <label class="form-label" for="conpass">Confirm password</label>
+                <div class="form-outline mb-4">
+                  <input
+                    type="password"
+                    id="conpass"
+                    name="conpass"
+                    class="form-control form-control-lg"
+                    value="<%= typeof conpass != 'undefined' ? conpass : ''%>"
+                  />
+                </div>
+
+                <div class="d-flex justify-content-center">
+                  <button
+                    type="submit"
+                    class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"
+                  >
+                    Register
+                  </button>
+                </div>
+
+                <p class="text-center text-muted mt-5 mb-0">
+                  Have already an account?
+                  <a href="/login" class="fw-bold text-body"
+                    ><u>Login here</u></a
+                  >
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include("partials/footer"); -%>

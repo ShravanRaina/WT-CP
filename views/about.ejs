@@ -1,0 +1,31 @@
+<%- include("partials/header"); -%> <%- include("partials/navbar"); -%>
+
+<pre>    <h6>&nbsp&nbsp&nbsp Our system offers a website for personal banking with dynamic multifold security approaches to ensure customer’s information remains secure at all times.
+    
+    
+    Functionalities implemented:
+    Register
+    Login
+    Withdrawal
+    Deposit
+    Transfer
+    Logout
+    </h6>
+    </pre>
+    <h4 class="ml-5">Validations and Authentications:</h4>
+    <ul>
+        <li>User passwords encrypted in database using hashing with salt-10
+        </li>
+        <li>Passwords should be in string format length more than 8 chars 
+        </li>
+        <li>Ensures authenticity of user for each page
+        </li>
+        <li>Withdrawal cannot be more than available amount 
+        </li>
+        <li>Money Transfer more than available amount not processed
+        </li>
+        <li>Sender and receiver id should not be the same
+        </li>
+    </ul>
+
+<%- include("partials/footer"); -%>
